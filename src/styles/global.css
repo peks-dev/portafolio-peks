@@ -1,0 +1,32 @@
+:root {
+  /* colors */
+  --primary: #242628;
+  --primary-2: #3a3d3f;
+  --contrast: #f5f6f6;
+  --contrast-2: #b9c0bf;
+  --ternary: #636363;
+  --accent: #de9e36;
+
+  /* Tipografía */
+  --headings: black-han-sans, sans-serif;
+  --body: mulish, sans-serif;
+  font-size: 10px;
+}
+@font-face {
+  font-family: "black-han-sans";
+  src: url("/fonts/BlackHanSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "mulish";
+  src: url("/fonts/Mulish-VariableFont_wght.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.yellow {
+  color: var(--accent);
+}
