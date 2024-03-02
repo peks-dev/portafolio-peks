@@ -1,12 +1,15 @@
 ---
 interface Props {
-  text: string;
+  text?: string;
+  type: "button" | "submit";
+  titleRule: string;
+  selectorCss?: string;
 }
 
-const { text } = Astro.props;
+const { text, type, titleRule, selectorCss } = Astro.props;
 ---
 
-<button>
+<button type={type} title={titleRule} class={selectorCss}>
   <slot />
   {text}
 </button>
@@ -16,7 +19,11 @@ const { text } = Astro.props;
     background-color: var(--accent);
     border-radius: 1.2rem;
     color: var(--ternary);
-    transition: transform 0.4s linear;
+
+    min-width: 5rem;
+    width: min-content;
+    min-height: 3rem;
+    padding: 0 1rem;
   }
 
   button:active {
@@ -25,5 +32,9 @@ const { text } = Astro.props;
 
   button:hover {
     color: var(--primary);
+  }
+
+  .btn--proyects {
+    width: 6rem;
   }
 </style>
