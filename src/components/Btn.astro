@@ -1,0 +1,29 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<button>
+  <slot />
+  {text}
+</button>
+
+<style>
+  button {
+    background-color: var(--accent);
+    border-radius: 1.2rem;
+    color: var(--ternary);
+    transition: transform 0.4s linear;
+  }
+
+  button:active {
+    transform: scale(1.1);
+  }
+
+  button:hover {
+    color: var(--primary);
+  }
+</style>
