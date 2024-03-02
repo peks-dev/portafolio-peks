@@ -1,11 +1,38 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import Btn from "@/components/Btn.astro";
+import ArrowBack from "@/components/icons/ArrowBack.astro";
 ---
 
 <Layout title="proyectos">
   <section>
     <header>
-      <h1 class="title">proyectos</h1>
+      <Btn
+        type="button"
+        titleRule="boton para retroceder"
+        selectorCss="btn--proyects"
+      >
+        <a href="/">
+          <ArrowBack />
+        </a>
+      </Btn>
+      <h1 class="title title--xlg">proyectos</h1>
     </header>
   </section>
 </Layout>
+
+<style>
+  section {
+    height: 100%;
+    width: 100%;
+  }
+  a {
+    width: 100%;
+    height: 100%;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>

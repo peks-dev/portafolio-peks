@@ -2,3 +2,7 @@
   font-family: var(--headings);
   text-transform: uppercase;
 }
+
+.title--xlg {
+  font-size: 4rem;
+}
