@@ -89,6 +89,7 @@ em {
   font-style: inherit;
   text-decoration: none;
   color: inherit;
+  line-height: normal;
 }
 
 /* Evitamos problemas con los pseudoelementos de quotes */

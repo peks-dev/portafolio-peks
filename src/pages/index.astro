@@ -1,33 +1,131 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import "../styles/global.css";
-import "../styles/reset.css";
-import "../styles/headings.css";
+import Layout from "@/layouts/Layout.astro";
+import Download from "@/components/icons/Download.astro";
+import CollageIcons from "@/components/CollageIcons.astro";
 ---
 
 <Layout title="peks">
   <header>
-    <h1 class="title">hola soy <span class="yellow">peks</span></h1>
+    <h1 class="title">hola! soy <span class="yellow">peks</span></h1>
   </header>
   <section class="grid">
-    <div class="logo-site"></div>
-    <a class="projects" href="/projects"></a>
-    <div class="text"></div>
-    <a class="about" href="/about"></a>
-    <a class="cv" href="cv"></a>
+    <picture class="grid-item logo">
+      <img src="/assets/peks-logo.png" alt="peks logo" />
+    </picture>
+    <a class="grid-item projects" href="/projects">
+      <CollageIcons />
+    </a>
+    <div class="grid-item text">
+      <p>
+        <span class="yellow">Desarrollador web front-end</span><br /> apacionado
+        por la tecnologia, el <br /> basketball y el nomadismo
+      </p>
+    </div>
+    <a class="grid-item about" href="/about">
+      <img src="/assets/about/peks.webp" alt="peks sonriendo con un balon" />
+    </a>
+    <a class="grid-item cv" href="cv"
+      >CV
+      <div class="cv__icon">
+        <Download />
+      </div></a
+    >
   </section>
+  <ul class="social-icons">
+    <li class="social-icon__item">
+      <a href="" class="social-icon__link">
+        <!-- icon -->
+      </a>
+    </li>
+  </ul>
 </Layout>
 
 <style>
-  main {
-    width: 100%;
-    height: 100%;
+  h1 {
+    font-size: 4rem;
   }
   .grid {
     display: grid;
-    grid-template-columns: repeat(1fr);
-    grid-template-rows: repeat(1fr);
-    width: 90%;
-    height: 70%;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    height: 75%;
+    max-width: 70rem;
+  }
+  .grid-item {
+    border-radius: 0.5rem;
+    border: 0.2rem solid var(--ternary);
+    background-color: var(--primary);
+    max-height: 30rem;
+    overflow: hidden;
+  }
+  .logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .logo img {
+    height: 100%;
+    object-fit: contain;
+  }
+  .projects {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    position: relative;
+  }
+  .text {
+    grid-column: 1/ 4;
+    grid-row: 2 / 3;
+    display: grid;
+    place-content: center;
+  }
+  .text p {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .about {
+    grid-column: 1/3;
+    grid-row: 3/ 4;
+    position: relative;
+  }
+  .about img {
+    height: 100%;
+    object-position: top;
+  }
+  .cv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--headings);
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--ternary);
+  }
+  .cv__icon {
+    height: 6rem;
+  }
+
+  .projects::before,
+  .about::before {
+    position: absolute;
+    background-color: var(--ternary);
+    padding: 0.7rem 1.4rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    z-index: 2;
+  }
+  .projects::before {
+    content: "Proyectos";
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 0.5rem;
+  }
+  .about::before {
+    content: "Sobre mi";
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0.5rem 0 0;
   }
 </style>

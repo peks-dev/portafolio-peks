@@ -29,4 +29,5 @@
 
 .yellow {
   color: var(--accent);
+  font-weight: bold;
 }

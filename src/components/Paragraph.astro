@@ -1,0 +1,17 @@
+---
+interface Props {
+  selectorCss?: string;
+  align: "left" | "center" | "right";
+}
+const { align, selectorCss } = Astro.props;
+---
+
+<p class={selectorCss} data-align={align}>
+  <slot />
+</p>
+
+<style is:global>
+  p {
+    font-size: 1.8rem;
+  }
+</style>

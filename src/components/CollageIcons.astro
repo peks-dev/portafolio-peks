@@ -1,0 +1,83 @@
+---
+import AstroIcon from "./icons/AstroIcon.astro";
+import CssIcon from "./icons/CssIcon.astro";
+import JsIcon from "./icons/JsIcon.astro";
+import HtmlIcon from "./icons/HtmlIcon.astro";
+import WordpressIcon from "./icons/WordpressIcon.astro";
+import DiviIcon from "./icons/DiviIcon.astro";
+import NextJsIcon from "./icons/NextJsIcon.astro";
+import SupabaseIcon from "./icons/SupabaseIcon.astro";
+import ReactIcon from "./icons/ReactIcon.astro";
+---
+
+<ul class="collage">
+  <li class="collage__container"><CssIcon /></li>
+  <li class="collage__container"><AstroIcon /></li>
+  <li class="collage__container"><HtmlIcon /></li>
+  <li class="collage__container"><JsIcon /></li>
+  <li class="collage__container"><WordpressIcon /></li>
+  <li class="collage__container"><DiviIcon /></li>
+  <li class="collage__container"><NextJsIcon /></li>
+  <li class="collage__container"><SupabaseIcon /></li>
+  <li class="collage__container"><ReactIcon /></li>
+</ul>
+
+<style>
+  .collage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribuye los hijos uniformemente */
+    align-items: center;
+  }
+  .collage__container {
+    position: absolute;
+    height: 3.5rem;
+    z-index: 1;
+  }
+  .collage__container:nth-child(1) {
+    /*css*/
+    top: 10%;
+    left: 5%;
+  }
+  .collage__container:nth-child(2) {
+    /*astro*/
+    top: 30%;
+    left: 20%;
+  }
+  .collage__container:nth-child(3) {
+    /*html*/
+    bottom: 10%;
+    left: 10%;
+  }
+  .collage__container:nth-child(4) {
+    /*Js*/
+    top: 13%;
+    left: 40%;
+  }
+  .collage__container:nth-child(5) {
+    /* wordpress*/
+    bottom: 20%;
+    left: 32%;
+  }
+  .collage__container:nth-child(6) {
+    /*Divi*/
+    top: 35%;
+    right: 20%;
+  }
+  .collage__container:nth-child(7) {
+    /*NextJs*/
+    bottom: 10%;
+    right: 10%;
+  }
+  .collage__container:nth-child(8) {
+    /*supabase*/
+    bottom: 15%;
+    right: 30%;
+  }
+  .collage__container:nth-child(9) {
+    /*react*/
+  }
+</style>
