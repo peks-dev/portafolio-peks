@@ -1,0 +1,154 @@
+---
+import GithubIcon from "@/components/icons/GithubIcon.astro";
+import LinkIcon from "./icons/LinkIcon.astro";
+import AstroIcon from "@/components/icons/AstroIcon.astro";
+import CssIcon from "@/components/icons/CssIcon.astro";
+import HtmlIcon from "@/components/icons/HtmlIcon.astro";
+import JsIcon from "@/components/icons/JsIcon.astro";
+import NextJsIcon from "@/components/icons/NextJsIcon.astro";
+import WordpressIcon from "@/components/icons/WordpressIcon.astro";
+import SupabaseIcon from "@/components/icons/SupabaseIcon.astro";
+import ReactIcon from "@/components/icons/ReactIcon.astro";
+import DiviIcon from "@/components/icons/DiviIcon.astro";
+
+interface Props {
+  siteName: string;
+  siteType: string;
+  tools: string[];
+  githubUrl?: string;
+  liveSiteUrl: string;
+  coverPath: string;
+}
+const { siteName, siteType, githubUrl, liveSiteUrl, coverPath, tools } =
+  Astro.props;
+---
+
+<article class="card">
+  <header class="card__header">
+    <picture class="card__img-container"
+      ><img src={coverPath} alt="Aguilar talleres website screenshot" />
+    </picture>
+    <div class="card__overlay">
+      <a href={githubUrl} target="_blank"><GithubIcon /></a>
+      <a href={liveSiteUrl} target="_blank"><LinkIcon /></a>
+    </div>
+  </header>
+  <footer class="card__content">
+    <div class="card__text-wrapper">
+      <h2 class="subtitle">{siteName}</h2>
+      <p class="card__web-type">{siteType}</p>
+    </div>
+    <ul class="card__icons-wrapper">
+      {
+        tools.map((tool) => (
+          <li class="card__icon-container">
+            {() => {
+              if (tool === "react") {
+                return <ReactIcon />;
+              } else if (tool === "supabase") {
+                return <SupabaseIcon />;
+              } else if (tool === "nextjs") {
+                return <NextJsIcon />;
+              } else if (tool === "astro") {
+                return <AstroIcon />;
+              } else if (tool === "css") {
+                return <CssIcon />;
+              } else if (tool === "javascript") {
+                return <JsIcon />;
+              } else if (tool === "html") {
+                return <HtmlIcon />;
+              } else if (tool === "wordpress") {
+                return <WordpressIcon />;
+              } else if (tool === "divi") {
+                return <DiviIcon />;
+              }
+            }}
+          </li>
+        ))
+      }
+    </ul>
+  </footer>
+</article>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: solid 0.2rem var(--ternary);
+  }
+  .card:hover {
+    border-color: var(--accent);
+    box-shadow: 0px 0px 20px 1px #f2d07a3f;
+  }
+
+  .card__header {
+    width: 100%;
+    position: relative;
+    height: 20rem;
+  }
+  .card__img-container {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+  }
+  .card__img-container img {
+    height: 100%;
+    object-position: top;
+  }
+  .card__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--ternary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 1;
+  }
+  .card:hover .card__overlay,
+  .card:active .card__overlay {
+    /* Reveal website links */
+    opacity: 1;
+    z-index: 3;
+  }
+
+  .card__overlay a {
+    width: 8rem;
+    color: var(--accent);
+    cursor: pointer;
+  }
+
+  .card__content {
+    flex: 0 1 30%;
+    width: 100%;
+    display: flex;
+    background-color: var(--primary);
+    padding: 1.2rem 0.8rem;
+    border-top: solid 0.5rem var(--accent);
+  }
+  .card__text-wrapper {
+    flex: 2 1 60%;
+  }
+  .card__web-type {
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+  .card__icons-wrapper {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .card__icon-container {
+    width: clamp(2.5rem, 3.5vw, 3.5rem);
+  }
+</style>
