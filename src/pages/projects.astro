@@ -2,11 +2,15 @@
 import Layout from "@/layouts/Layout.astro";
 import Btn from "@/components/Btn.astro";
 import ArrowBack from "@/components/icons/ArrowBack.astro";
+
+import CardV2 from "@/components/CardV2.astro";
+
+import { projects } from "@/lib/proyects";
 ---
 
 <Layout title="proyectos">
-  <section>
-    <header>
+  <section class="project-page-wrapper">
+    <header class="project__header">
       <Btn
         type="button"
         titleRule="boton para retroceder"
@@ -18,21 +22,63 @@ import ArrowBack from "@/components/icons/ArrowBack.astro";
       </Btn>
       <h1 class="title title--xlg">proyectos</h1>
     </header>
+    <ul class="projects">
+      {
+        projects.map((project) => {
+          return (
+            <li class="projects__item">
+              <CardV2
+                siteName={project.name}
+                siteType={project.type}
+                githubUrl={project.repository}
+                liveSiteUrl={project.liveSite}
+                coverPath={project.coverImg}
+                tools={project.tecnologys}
+              />
+            </li>
+          );
+        })
+      }
+    </ul>
   </section>
 </Layout>
 
 <style>
-  section {
+  .project-page-wrapper {
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
   }
   a {
     width: 100%;
     height: 100%;
   }
-  header {
+  .project__header {
+    flex: 1 1 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
+  }
+  .projects {
+    flex: 2 0 80%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 40rem), 1fr));
+    gap: 2rem;
+    padding-bottom: 5rem;
+  }
+  .projects::-webkit-scrollbar {
+    background-color: transparent;
+    width: 1rem;
+  }
+  .projects::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
+    border-radius: 1rem;
+  }
+  .projects::-webkit-scrollbar-button {
+    background-color: var(--accent);
+    height: 10px;
+    border-radius: 1rem;
   }
 </style>
