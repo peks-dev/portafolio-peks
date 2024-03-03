@@ -1,20 +1,23 @@
 export const projects = [
   {
     name: "basket places",
+    type: "single-page-app",
     liveSite: "https://basket-places.netlify.app/",
     repository: "https://github.com/peks-dev/basket-places",
     coverImg: "/assets/webs/basket-places.jpeg",
-    tecnologys: ["next", "react", "supabase"],
+    tecnologys: ["nextjs", "react", "supabase"],
   },
   {
     name: "aguilar talleres",
+    type: "multi-page",
     liveSite: "https://aguilartalleres.com/",
     repository: "https://github.com/peks-dev/new-AT",
     coverImg: "/assets/webs/aguilar-talleres.jpeg",
-    tecnologys: ["astro"],
+    tecnologys: ["astro", "html", "css", "javascript"],
   },
   {
     name: "sign rite",
+    type: "landing-page",
     liveSite: "https://sign-rite.com/",
     repository: "",
     coverImg: "/assets/webs/sign-rite.jpeg",
@@ -22,21 +25,24 @@ export const projects = [
   },
   {
     name: "julian DP",
+    type: "multi-page",
     liveSite: "https://juliancollazodp.com/",
     repository: "https://github.com/peks-dev/julian-astro-web",
     coverImg: "/assets/webs/julian.webp",
-    tecnologys: ["astro"],
+    tecnologys: ["astro", "html", "css", "javascript"],
   },
   {
     name: "dentist",
+    type: "landing-page",
     liveSite: "https://dental-acosta.netlify.app/",
     repository: "https://github.com/peks-dev/dentist-website",
     coverImg: "/assets/webs/dental-acosta.jpg",
-    tecnologys: ["astro"],
+    tecnologys: ["astro", "html", "css", "javascript"],
   },
 
   {
     name: "cbm",
+    type: "landing-page",
     liveSite: "https://clinica-de-baloncesto-mexicano.netlify.app/",
     repository: "https://github.com/peks-dev/CBM-web",
     coverImg: "/assets/webs/cbm.jpg",
@@ -45,6 +51,7 @@ export const projects = [
 
   {
     name: "guerreros",
+    type: "landing-page",
     liveSite: "https://club-guerreros.netlify.app/",
     repository: "https://github.com/peks-dev/guerreros-tizimin",
     coverImg: "/assets/webs/guerreros.jpeg",
