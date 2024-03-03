@@ -1,8 +1,13 @@
-.title {
+.title,
+.subtitle {
   font-family: var(--headings);
   text-transform: uppercase;
 }
 
 .title--xlg {
   font-size: 4rem;
+}
+
+.subtitle {
+  font-size: clamp(2rem, 3vw, 2.3rem);
 }
