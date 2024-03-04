@@ -11,3 +11,6 @@
 .subtitle {
   font-size: clamp(2rem, 3vw, 2.3rem);
 }
+.subtitle--sm {
+  font-size: clamp(1.6rem, 2.7vw, 2rem);
+}

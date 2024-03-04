@@ -1,0 +1,50 @@
+---
+interface Props {
+  title: string;
+  text: string;
+}
+const { title, text } = Astro.props;
+---
+
+<li class="story-step">
+  <div class="story-step__divisor"></div>
+  <div class="story-step__content">
+    <h3 class="subtitle subtitle--sm">{title}</h3>
+    <p>
+      {text}
+    </p>
+  </div>
+</li>
+
+<style>
+  .story-step {
+    height: min-content;
+    display: flex;
+  }
+  .story-step__divisor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .story-step__divisor::before {
+    content: "";
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--accent);
+    border-radius: 50%;
+  }
+  .story-step__divisor::after {
+    content: "";
+    display: block;
+    width: 0.2rem;
+    height: 100%;
+    background-color: var(--accent);
+  }
+  .story-step__content {
+    padding: 0 0 1rem 1rem;
+  }
+  p {
+    margin-top: 1.5rem;
+  }
+</style>

@@ -28,6 +28,7 @@
 }
 
 .yellow {
+  /* resaltar texto */
   color: var(--accent);
   font-weight: bold;
 }

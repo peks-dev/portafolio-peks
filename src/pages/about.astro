@@ -1,11 +1,116 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import Btn from "@/components/Btn.astro";
+import ArrowBack from "@/components/icons/ArrowBack.astro";
+import StoryStep from "@/components/StoryStep.astro";
 ---
 
 <Layout title="sobre mi">
-  <div class="about-wrapper">
+  <div class="about">
     <header class="about__header">
+      <Btn
+        type="button"
+        titleRule="boton para retroceder"
+        selectorCss="btn--proyects"
+      >
+        <a href="/">
+          <ArrowBack />
+        </a>
+      </Btn>
       <h1 class="title title--xlg">sobre mi</h1>
     </header>
+    <section class="about__content">
+      <picture class="about__img-container">
+        <img
+          src="/assets/about/peks.webp"
+          alt="peks sentado con un balon y ropa de basket"
+        />
+      </picture>
+      <div class="about__intro-wrapper">
+        <h2 class="subtitle">Mi dev trip</h2>
+        <div class="about__text-wrap">
+          <p>Soy un mochilero basketbolista desarrollador web jajajaja</p>
+          <p>
+            La intencion es juntar mis 3 pilares de vida, el conocer lugares
+            nuevos, jugar basketball y crear con la computadora
+          </p>
+        </div>
+      </div>
+      <ul class="dev-trip">
+        <StoryStep
+          title="2017 - Inicio"
+          text="En mi necesidad por adquirir una habilidad que otorgara libertad geo-espacial y estuviera relacionada con mis paciones, empeze aprender sobre creacion web, empezando por el diseño y luego el desarrollo"
+        />
+        <StoryStep
+          title="2019 - Freelance mode on"
+          text="Ya habiendo estudiado y practicado por mi cuenta, empece a crear webs corporativas, landing pages y e-commerces a cambio de dinero. El stack que usaba en este entonces era wordpress con Elementor y Figma"
+        />
+        <StoryStep
+          title="2021 - Entendiendo codigo"
+          text="Al ver que mis creaciones estaban limitadas por las configuraciones y bloques prestablecidos en estas herramientas, decidi empezar a comprender las bases de la programacion con HTML, CSS y JS."
+        />
+        <StoryStep
+          title="2022 - Mochileada y React"
+          text="Aqui empece a viajar con un balon, una laptop y mis ganas de aprender sobre librerias, frameworks, base de datos, uso de APIs y mejorar mi Javascript. Entonces comence el desarrollo de un proyecto personal llamado Basket Places usando React"
+        />
+        <StoryStep
+          title="2023 - Aparicion de Astro"
+          text="A la par de mi proyecto personal, segui creando webs para otros y al ver que todas eran estáticas, opte por explorar el framework Astro. Vaya sorpresa, me ha encantado y he comprendido mejor como funciona el client / server side rendering ."
+        />
+        <StoryStep
+          title="hoy - Aprendiendo NextJS"
+          text="Actualmente he parado de mochilear por motivos familiares, entonces estoy aprovechando a comprender el uso de NextJS para especializarme en el desarrollo con React. Para alcanzar esto, me encuentro migrando Basket Places hacia esta tecnología. Este ha sido mi DEV trip jajaja espero te halla gustado, saludos!"
+        />
+      </ul>
+    </section>
+
+    <style>
+      .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        width: 100%;
+        height: 100%;
+      }
+      .about__header {
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 2%;
+      }
+      .about__intro-wrapper {
+        padding: 0 1rem;
+      }
+      .about__content {
+        flex: 2 0 85%;
+        width: min(100%, 65rem);
+        /* padding: 0 1rem; */
+        gap: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: auto;
+        border-radius: 1rem;
+        background-color: var(--primary);
+        border: solid 0.2rem var(--ternary);
+      }
+
+      /* scrollbar settings start*/
+      .about__content::-webkit-scrollbar {
+        background-color: transparent;
+        width: 1rem;
+      }
+      .about__content::-webkit-scrollbar-thumb {
+        background-color: var(--accent);
+        border-radius: 1rem;
+      }
+      /* scrollbar settings end*/
+
+      .dev-trip {
+        padding: 0 1rem;
+      }
+    </style>
   </div>
 </Layout>

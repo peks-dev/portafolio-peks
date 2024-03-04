@@ -92,6 +92,11 @@ em {
   line-height: normal;
 }
 
+p {
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  text-wrap: balance;
+}
+
 /* Evitamos problemas con los pseudoelementos de quotes */
 blockquote:before,
 blockquote:after,
