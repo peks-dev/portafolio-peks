@@ -5,7 +5,7 @@ export const projects = [
     liveSite: "https://basket-places.netlify.app/",
     repository: "https://github.com/peks-dev/basket-places",
     coverImg: "/assets/webs/basket-places.jpeg",
-    tecnologys: ["nextjs", "react", "supabase"],
+    technologies: ["nextjs", "react", "supabase"],
   },
   {
     name: "aguilar talleres",
@@ -13,7 +13,7 @@ export const projects = [
     liveSite: "https://aguilartalleres.com/",
     repository: "https://github.com/peks-dev/new-AT",
     coverImg: "/assets/webs/aguilar-talleres.jpeg",
-    tecnologys: ["astro", "html", "css", "javascript"],
+    technologies: ["astro", "html", "css", "javascript"],
   },
   {
     name: "sign rite",
@@ -21,7 +21,7 @@ export const projects = [
     liveSite: "https://sign-rite.com/",
     repository: "",
     coverImg: "/assets/webs/sign-rite.jpeg",
-    tecnologys: ["wordpress", "divi"],
+    technologies: ["wordpress", "divi"],
   },
   {
     name: "julian DP",
@@ -29,7 +29,7 @@ export const projects = [
     liveSite: "https://juliancollazodp.com/",
     repository: "https://github.com/peks-dev/julian-astro-web",
     coverImg: "/assets/webs/julian.webp",
-    tecnologys: ["astro", "html", "css", "javascript"],
+    technologies: ["astro", "html", "css", "javascript"],
   },
   {
     name: "dentist",
@@ -37,7 +37,7 @@ export const projects = [
     liveSite: "https://dental-acosta.netlify.app/",
     repository: "https://github.com/peks-dev/dentist-website",
     coverImg: "/assets/webs/dental-acosta.jpg",
-    tecnologys: ["astro", "html", "css", "javascript"],
+    technologies: ["astro", "html", "css", "javascript"],
   },
 
   {
@@ -46,7 +46,7 @@ export const projects = [
     liveSite: "https://clinica-de-baloncesto-mexicano.netlify.app/",
     repository: "https://github.com/peks-dev/CBM-web",
     coverImg: "/assets/webs/cbm.jpg",
-    tecnologys: ["html", "css", "javascript"],
+    technologies: ["html", "css", "javascript"],
   },
 
   {
@@ -55,6 +55,6 @@ export const projects = [
     liveSite: "https://club-guerreros.netlify.app/",
     repository: "https://github.com/peks-dev/guerreros-tizimin",
     coverImg: "/assets/webs/guerreros.jpeg",
-    tecnologys: ["html", "css", "javascript"],
+    technologies: ["html", "css", "javascript"],
   },
 ];
