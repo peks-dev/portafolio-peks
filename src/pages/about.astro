@@ -24,6 +24,7 @@ import StoryStep from "@/components/StoryStep.astro";
         <img
           src="/assets/about/peks.webp"
           alt="peks sentado con un balon y ropa de basket"
+          transition:name="peks-img"
         />
       </picture>
       <div class="about__intro-wrapper">
@@ -82,12 +83,19 @@ import StoryStep from "@/components/StoryStep.astro";
       }
       .about__intro-wrapper {
         padding: 0 1rem;
+        text-align: center;
+      }
+      .about__text-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 1rem;
       }
       .about__content {
         flex: 2 0 85%;
         width: min(100%, 65rem);
         /* padding: 0 1rem; */
-        gap: 2.5rem;
+        gap: 3.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;

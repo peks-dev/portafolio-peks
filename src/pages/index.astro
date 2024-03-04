@@ -17,7 +17,12 @@ import GithubIcon from "@/components/icons/GithubIcon.astro";
     <picture class="grid-item logo">
       <img src="/assets/peks-logo.png" alt="peks logo" />
     </picture>
-    <a class="grid-item projects" href="/projects" id="projects">
+    <a
+      class="grid-item projects"
+      href="/projects"
+      id="projects"
+      transition:name="projects"
+    >
       <CollageIcons />
     </a>
     <div class="grid-item text">
@@ -27,7 +32,11 @@ import GithubIcon from "@/components/icons/GithubIcon.astro";
       </p>
     </div>
     <a class="grid-item about" href="/about">
-      <img src="/assets/about/peks.webp" alt="peks sonriendo con un balon" />
+      <img
+        src="/assets/about/peks.webp"
+        alt="peks sonriendo con un balon"
+        transition:name="peks-img"
+      />
     </a>
     <a class="grid-item cv" href="/assets/cv.pdf" download="cv.pdf"
       >CV
