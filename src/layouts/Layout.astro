@@ -1,9 +1,11 @@
 ---
 interface Props {
   title: string;
+  description: string;
+  socialTitle: string;
 }
 
-const { title } = Astro.props;
+const { title, description, socialTitle } = Astro.props;
 import { ViewTransitions } from "astro:transitions";
 import "@/styles/global.css";
 import "@/styles/reset.css";
@@ -20,6 +22,18 @@ import "@/styles/headings.css";
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- social link tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={socialTitle} />
+    <meta property="og:image" content="/assets/about/peks.webp" />
+    <meta
+      property="og:image:alt"
+      content="peks sentado con un balon y ropa de basket"
+    />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="peks dev" />
+    <meta property="og:locale" content="es_MX" />
 
     <meta name="generator" content={Astro.generator} />
 
