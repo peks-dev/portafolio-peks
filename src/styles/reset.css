@@ -93,7 +93,7 @@ em {
 }
 
 p {
-  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  font-size: clamp(1.8rem, 2vw, 2.2rem);
   text-wrap: balance;
 }
 
