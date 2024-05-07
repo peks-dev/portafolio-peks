@@ -1,0 +1,51 @@
+---
+import MailIcon from "./icons/MailIcon.astro";
+import GithubIcon from "./icons/GithubIcon.astro";
+import InstagramIcon from "./icons/InstagramIcon.astro";
+---
+
+<ul class="social-icons">
+  <li class="social-icon__item">
+    <a href="mailto:0peks0@proton.me" class="social-icon__link">
+      <MailIcon />
+    </a>
+    <li class="social-icon__item">
+      <a
+        href="https://github.com/peks-dev"
+        class="social-icon__link"
+        target="_blank"
+      >
+        <GithubIcon />
+      </a>
+      <li class="social-icon__item">
+        <a
+          href="https://www.instagram.com/lpeksl?igsh=cXF6NjhnZ2t2MGt6&utm_source=qr"
+          class="social-icon__link"
+          target="_blank"
+        >
+          <InstagramIcon />
+        </a>
+      </li>
+    </li>
+  </li>
+</ul>
+
+<style>
+  .social-icons {
+    width: min(60%, 250px);
+    display: flex;
+    justify-content: space-around;
+  }
+  .social-icon__item {
+    width: 4rem;
+    color: var(--accent);
+  }
+
+  .social-icon__item:hover {
+    filter: drop-shadow(0px 0px 10px #f2d07a3f);
+  }
+
+  .social-icon__item:active {
+    transform: scale(1.1);
+  }
+</style>
