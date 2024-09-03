@@ -1,5 +1,6 @@
 {
   "name": "peks-portafolio",
+  "description": "Web para mostrar los proyectos mas relevantes de peks",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
